@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Practice Tasks Website</title>
+  <style>
+    body { text-align: center; font-family: Arial, sans-serif; }
+    iframe { width: 80%; height: 600px; border: 2px solid #ccc; margin-top: 20px; }
+    button { margin: 10px; padding: 10px 20px; font-size: 16px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>HTML Practice Tasks</h1>
+  <p>Switch between Day 1 and Day 2 outputs using the buttons below:</p>
+
+  <button onclick="loadPage('day1.html')">Show Day 1</button>
+  <button onclick="loadPage('day2.html')">Show Day 2</button>
+
+  <iframe id="viewer" src="day1.html"></iframe>
+
+  <script>
+    function loadPage(page) {
+      document.getElementById("viewer").src = page;
+    }
+  </script>
+</body>
+</html>
