@@ -3,46 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Info Page</title>
+  <title>Day 2 | Abdul Rahman</title>
   <style>
-    body { font-family: "Poppins", sans-serif; background: #f5f0e6; color: #3e2c23; margin: 0; }
-    header, footer { background: #8b5e3c; color: #fff; text-align: center; padding: 15px 0; }
-    nav a { margin: 0 15px; color: #fff; text-decoration: none; }
-    nav a:hover { text-decoration: underline; }
-    main { padding: 40px; }
-    section { margin-bottom: 40px; }
-    h2 { color: #8b5e3c; }
-    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-    th, td { border: 1px solid #3e2c23; padding: 10px; text-align: center; }
-    th { background: #e6d9c5; }
-    form { display: grid; gap: 12px; max-width: 400px; }
-    input, textarea, select, button { padding: 10px; font-size: 14px; border: 1px solid #8b5e3c; border-radius: 6px; }
-    button { background: #8b5e3c; color: #fff; cursor: pointer; }
-    button:hover { background: #a06f4c; }
-    aside { background: #f0e4d3; padding: 15px; border-radius: 8px; margin-top: 20px; }
-    iframe { width: 100%; height: 300px; border: none; margin-top: 10px; }
+    body { font-family: "Poppins", sans-serif; background: #f5f0e6; color: #3e2c23; margin: 0; line-height: 1.6; }
+    header, footer { background: #8b5e3c; color: #fff; text-align: center; padding: 20px; }
+    main { max-width: 1000px; margin: 40px auto; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    h1, h2 { color: #8b5e3c; }
+    section { margin: 30px 0; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    table th, table td { border: 1px solid #ccc; padding: 10px; text-align: center; }
+    table th { background: #f5f0e6; }
+    .center-img { display: flex; justify-content: center; margin: 30px 0; }
+    .center-img img { max-width: 220px; border-radius: 12px; }
+    form input, form textarea, form select { width: 100%; padding: 10px; margin-top: 10px; border-radius: 8px; border: 1px solid #ccc; }
+    form button { margin-top: 15px; padding: 10px 20px; background: #8b5e3c; color: #fff; border: none; border-radius: 8px; cursor: pointer; }
+    form button:hover { background: #a06f4c; }
+    iframe { border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); width: 420px; height: 236px; display: block; margin: 20px auto; }
+    aside { background: #f5f0e6; padding: 15px; border-radius: 8px; margin: 20px 0; }
+    footer p { margin: 0; font-size: 14px; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Student Info Page</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#marks">Marks</a>
-      <a href="#feedback">Feedback</a>
-      <a href="#media">Media</a>
-    </nav>
+    <h1>Day 2: Student Info Page</h1>
   </header>
 
   <main>
-    <section id="about">
+    <section>
       <h2>About Me</h2>
-      <p>Hello! I’m <strong>Abdul Rahman</strong>. This page is part of my practice tasks to explore <b>HTML5 elements</b>, 
-         formatting, and structure. I enjoy <i>building clean websites</i> and experimenting with new web technologies.</p>
+      <p>Hello, I am <b>Abdul Rahman</b>. I enjoy <i>technology</i>, <strong>innovation</strong>, and building impactful solutions.</p>
     </section>
 
-    <section id="marks">
-      <h2>My Marks</h2>
+    <div class="center-img">
+      <img src="https://via.placeholder.com/220x150.png?text=Day+2" alt="Day 2 Logo">
+    </div>
+
+    <section>
+      <h2>Subject Marks</h2>
       <table>
         <tr>
           <th>Subject</th>
@@ -50,42 +47,46 @@
           <th>Grade</th>
         </tr>
         <tr><td>Mathematics</td><td>95</td><td>O</td></tr>
-        <tr><td>Science</td><td>89</td><td>A+</td></tr>
-        <tr><td>English</td><td>85</td><td>A</td></tr>
-        <tr><td>History</td><td>80</td><td>A-</td></tr>
+        <tr><td>Science</td><td>88</td><td>A+</td></tr>
+        <tr><td>English</td><td>80</td><td>A</td></tr>
+        <tr><td>History</td><td>74</td><td>A-</td></tr>
       </table>
     </section>
 
-    <section id="feedback">
+    <section>
       <h2>Feedback Form</h2>
       <form>
-        <input type="text" placeholder="Enter your name" required>
-        <input type="email" placeholder="Enter your email" required>
+        <label>Name:</label>
+        <input type="text" required>
+        <label>Email:</label>
+        <input type="email" required>
+        <label>Feedback:</label>
+        <textarea rows="4"></textarea>
+        <label>Interested in:</label>
         <select>
-          <option value="">Select Subject</option>
-          <option>Mathematics</option>
-          <option>Science</option>
-          <option>English</option>
+          <option>Web Development</option>
+          <option>AI & ML</option>
+          <option>Data Science</option>
+          <option>Python Programming</option>
         </select>
-        <textarea rows="4" placeholder="Your feedback"></textarea>
         <button type="submit">Submit</button>
       </form>
     </section>
 
-    <section id="media">
-      <h2>Useful Resources</h2>
-      <p>Check out this amazing YouTube channel for coding:</p>
-      <iframe src="https://www.youtube.com/embed/qbLc5a9jdXo" allowfullscreen></iframe>
-
-      <aside>
-        <h3>Additional Resource</h3>
-        <p>Learn Python for free: <a href="https://www.python.org/" target="_blank">Python Official Site</a></p>
-      </aside>
+    <section>
+      <h2>Learn with YouTube</h2>
+      <iframe src="https://www.youtube.com/embed/1xq5Yp3vZLw" title="Take U Forward Python Course" allowfullscreen></iframe>
     </section>
+
+    <aside>
+      <h3>Additional Resources</h3>
+      <p>Check out this amazing site: <a href="https://takeuforward.org/" target="_blank">Take U Forward</a></p>
+      <p>Also explore my <a href="https://a-r007.github.io/My_Resume/" target="_blank">portfolio site</a>.</p>
+    </aside>
   </main>
 
   <footer>
-    <p>&copy; 2025 Abdul Rahman | All rights reserved</p>
+    <p>&copy; 2025 Abdul Rahman</p>
   </footer>
 </body>
 </html>
