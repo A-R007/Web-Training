@@ -1,112 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Practice Tasks Website</title>
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
-    section { display: none; max-width: 800px; margin: auto; text-align: left; }
-    section.active { display: block; }
-    button { margin: 10px; padding: 10px 20px; font-size: 16px; cursor: pointer; }
-    img { max-width: 300px; margin: 10px 0; }
-    table { border-collapse: collapse; width: 100%; margin: 20px 0; }
-    table, th, td { border: 1px solid #333; padding: 8px; text-align: center; }
-    nav a { margin: 0 5px; }
-    footer { margin-top: 20px; font-size: 14px; color: #555; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thanush - My First Website</title>
+<style>
+/* Reset + smooth scrolling */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { 
+  font-family: 'Poppins', sans-serif; 
+  background: #f5f0e6; /* light beige */
+  color: #3b2f2f; /* dark brown text */
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #e6dfd2; /* soft beige */
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 2px solid #a1866f;
+  box-shadow: 0 5px 15px rgba(161,134,111,0.3);
+}
+header h1 { font-size: 24px; color: #6b4226; }
+nav a {
+  color: #6b4226;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+nav a:hover { color: #a1866f; }
+
+/* Sections */
+section {
+  padding: 100px 10%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+  border-radius: 12px;
+  margin: 20px 0;
+  background: #fdfbf7;
+  border: 2px solid #e0d6c3;
+}
+section.show { opacity: 1; transform: translateY(0); }
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #6b4226;
+  position: relative;
+}
+h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #a1866f;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+p { font-size: 18px; margin-bottom: 20px; color: #4a3c2f; }
+
+/* Hobby List */
+ul {
+  list-style: none;
+  margin-top: 20px;
+}
+ul li {
+  background: #e6dfd2;
+  margin: 10px 0;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+ul li:hover {
+  background: #d9c8b0;
+  transform: translateX(5px);
+}
+
+/* Link button */
+a.button-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  background: #6b4226;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+a.button-link:hover {
+  background: #a1866f;
+}
+
+/* YouTube iframe */
+iframe {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(107,66,38,0.3);
+  margin: 15px 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #e6dfd2;
+  border-top: 2px solid #a1866f;
+  color: #6b4226;
+  margin-top: 40px;
+}
+</style>
 </head>
 <body>
-  <h1>HTML Practice Tasks</h1>
-  <p>Click a button below to view the Day 1 or Day 2 output:</p>
 
-  <button onclick="showSection('day1')">Show Day 1</button>
-  <button onclick="showSection('day2')">Show Day 2</button>
+<!-- Header -->
+<header>
+  <h1>Thanush - My First Website</h1>
+  <nav>
+    <a href="#intro">Intro</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#favlink">Favorite Link</a>
+    <a href="#ytvideo">Videos</a>
+  </nav>
+</header>
 
-  <!-- Day 1 Content -->
-  <section id="day1" class="active">
-    <h2>Day 1 - My First Website</h2>
-    <h1>Abdul Rahman</h1>
-    <p>Hello! I am learning web development. I enjoy coding and exploring new technologies.</p>
+<!-- Intro Section -->
+<section id="intro">
+  <h2>Welcome</h2>
+  <p>Hello! I’m <b>Thanush</b>, exploring the world of technology and web development.  
+     This is my very first website, built from scratch with HTML and styled simply.</p>
+</section>
 
-    <h3>My Hobbies</h3>
-    <ul>
-      <li>Coding</li>
-      <li>Reading</li>
-      <li>Football</li>
-    </ul>
+<!-- Hobbies Section -->
+<section id="hobbies">
+  <h2>My Hobbies</h2>
+  <ul>
+    <li>Reading & Research</li>
+    <li>Creative Designing</li>
+    <li>Exploring Tech Trends</li>
+  </ul>
+</section>
 
-    <h3>My Favorite Image</h3>
-    <img src="https://picsum.photos/300" alt="Hobby Image">
+<!-- Favorite Website Section -->
+<section id="favlink">
+  <h2>Favorite Website</h2>
+  <p>I often visit this site to learn and get inspired:</p>
+  <a href="https://www.wikipedia.org" target="_blank" class="button-link">Go to Wikipedia</a>
+</section>
 
-    <h3>My Favorite Website</h3>
-    <a href="https://www.openai.com" target="_blank">Visit OpenAI</a>
-  </section>
+<!-- YouTube Video Section -->
+<section id="ytvideo">
+  <h2>Take U Forward - Inspiring Tech Content</h2>
+  <p>Here are some of my favorite videos from <b>Take U Forward</b> channel:</p>
+  
+  <!-- DSA Roadmap -->
+  <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/rvd2W7cZ0GQ" 
+    title="DSA Roadmap - Take U Forward"
+    allowfullscreen>
+  </iframe>
 
-  <!-- Day 2 Content -->
-  <section id="day2">
-    <header>
-      <h2>Day 2 - Student Info Page</h2>
-      <nav>
-        <a href="#about">About</a> |
-        <a href="#marks">Marks</a> |
-        <a href="#feedback">Feedback</a>
-      </nav>
-    </header>
+  <!-- Dynamic Programming Intro -->
+  <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/nqowUJzG-iM" 
+    title="Dynamic Programming Intro - Take U Forward"
+    allowfullscreen>
+  </iframe>
 
-    <main>
-      <section id="about">
-        <h3>About Me</h3>
-        <p>Hello, I am <strong>Abdul Rahman</strong>. I love <i>web development</i> and enjoy building new projects.</p>
-      </section>
+  <!-- System Design Roadmap -->
+  <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/xp1Z7rwhIuk" 
+    title="System Design Roadmap - Take U Forward"
+    allowfullscreen>
+  </iframe>
 
-      <section id="marks">
-        <h3>Subject Marks</h3>
-        <table>
-          <tr><th>Subject</th><th>Marks</th></tr>
-          <tr><td>Math</td><td>90</td></tr>
-          <tr><td>Science</td><td>85</td></tr>
-          <tr><td>English</td><td>88</td></tr>
-        </table>
-      </section>
+  <a href="https://www.youtube.com/@takeUforward" target="_blank" class="button-link">Visit Channel</a>
+</section>
 
-      <section id="feedback">
-        <h3>Feedback Form</h3>
-        <form>
-          Name: <input type="text" name="name"><br><br>
-          Email: <input type="email" name="email"><br><br>
-          Favorite Subject:
-          <select>
-            <option>Math</option>
-            <option>Science</option>
-            <option>English</option>
-          </select><br><br>
-          Message:<br>
-          <textarea rows="4" cols="30"></textarea><br><br>
-          <input type="submit" value="Submit">
-        </form>
-      </section>
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Thanush - My First Website | Crafted with simplicity</p>
+</footer>
 
-      <section>
-        <h3>Embedded Media</h3>
-        <iframe width="400" height="250" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video"></iframe>
-      </section>
-    </main>
-
-    <aside>
-      <h3>Related Content</h3>
-      <p>You can learn HTML basics at <a href="https://www.w3schools.com" target="_blank">W3Schools</a>.</p>
-    </aside>
-
-    <footer>
-      <p>&copy; 2025 Abdul Rahman | All Rights Reserved</p>
-    </footer>
-  </section>
-
-  <script>
-    function showSection(sectionId) {
-      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
-      document.getElementById(sectionId).classList.add("active");
-    }
-  </script>
+<!-- JS for fade-in on scroll -->
+<script>
+const sections = document.querySelectorAll("section");
+const reveal = () => {
+  const trigger = window.innerHeight - 100;
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if(top < trigger) sec.classList.add("show");
+  });
+};
+window.addEventListener("scroll", reveal);
+window.addEventListener("load", reveal);
+</script>
 </body>
 </html>
