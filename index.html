@@ -3,90 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Day 2 | Abdul Rahman</title>
+  <title>Abdul Rahman | HTML Practice</title>
   <style>
-    body { font-family: "Poppins", sans-serif; background: #f5f0e6; color: #3e2c23; margin: 0; line-height: 1.6; }
-    header, footer { background: #8b5e3c; color: #fff; text-align: center; padding: 20px; }
-    main { max-width: 1000px; margin: 40px auto; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-    h1, h2 { color: #8b5e3c; }
-    section { margin: 30px 0; }
-    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-    table th, table td { border: 1px solid #ccc; padding: 10px; text-align: center; }
-    table th { background: #f5f0e6; }
-    .center-img { display: flex; justify-content: center; margin: 30px 0; }
-    .center-img img { max-width: 220px; border-radius: 12px; }
-    form input, form textarea, form select { width: 100%; padding: 10px; margin-top: 10px; border-radius: 8px; border: 1px solid #ccc; }
-    form button { margin-top: 15px; padding: 10px 20px; background: #8b5e3c; color: #fff; border: none; border-radius: 8px; cursor: pointer; }
-    form button:hover { background: #a06f4c; }
-    iframe { border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); width: 420px; height: 236px; display: block; margin: 20px auto; }
-    aside { background: #f5f0e6; padding: 15px; border-radius: 8px; margin: 20px 0; }
+    body { font-family: "Poppins", sans-serif; background: #f5f0e6; color: #3e2c23; margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+    header, footer { background: #8b5e3c; color: #fff; text-align: center; padding: 20px 0; }
+    main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 50px 20px; }
+    h1 { margin-bottom: 10px; color: #fff; }
+    h2 { color: #8b5e3c; margin-bottom: 20px; }
+    .buttons { display: flex; gap: 20px; margin-top: 30px; }
+    a.button { padding: 12px 25px; background: #8b5e3c; color: #fff; text-decoration: none; font-weight: 500; border-radius: 8px; transition: 0.3s; }
+    a.button:hover { background: #a06f4c; }
     footer p { margin: 0; font-size: 14px; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Day 2: Student Info Page</h1>
+    <h1>Abdul Rahman</h1>
+    <p>HTML Practice Tasks</p>
   </header>
 
   <main>
-    <section>
-      <h2>About Me</h2>
-      <p>Hello, I am <b>Abdul Rahman</b>. I enjoy <i>technology</i>, <strong>innovation</strong>, and building impactful solutions.</p>
-    </section>
-
-    <div class="center-img">
-      <img src="https://via.placeholder.com/220x150.png?text=Day+2" alt="Day 2 Logo">
+    <h2>Select a Practice Day</h2>
+    <div class="buttons">
+      <a href="day1/index.html" class="button">Day 1</a>
+      <a href="day2/index.html" class="button">Day 2</a>
     </div>
-
-    <section>
-      <h2>Subject Marks</h2>
-      <table>
-        <tr>
-          <th>Subject</th>
-          <th>Marks</th>
-          <th>Grade</th>
-        </tr>
-        <tr><td>Mathematics</td><td>95</td><td>O</td></tr>
-        <tr><td>Science</td><td>88</td><td>A+</td></tr>
-        <tr><td>English</td><td>80</td><td>A</td></tr>
-        <tr><td>History</td><td>74</td><td>A-</td></tr>
-      </table>
-    </section>
-
-    <section>
-      <h2>Feedback Form</h2>
-      <form>
-        <label>Name:</label>
-        <input type="text" required>
-        <label>Email:</label>
-        <input type="email" required>
-        <label>Feedback:</label>
-        <textarea rows="4"></textarea>
-        <label>Interested in:</label>
-        <select>
-          <option>Web Development</option>
-          <option>AI & ML</option>
-          <option>Data Science</option>
-          <option>Python Programming</option>
-        </select>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-
-    <section>
-      <h2>Learn with YouTube</h2>
-      <iframe src="https://www.youtube.com/embed/1xq5Yp3vZLw" title="Take U Forward Python Course" allowfullscreen></iframe>
-    </section>
-
-    <aside>
-      <h3>Additional Resources</h3>
-      <p>Check out this amazing site: <a href="https://takeuforward.org/" target="_blank">Take U Forward</a></p>
-      <p>Also explore my <a href="https://a-r007.github.io/My_Resume/" target="_blank">portfolio site</a>.</p>
-    </aside>
   </main>
 
   <footer>
-    <p>&copy; 2025 Abdul Rahman</p>
+    <p>&copy; 2025 Abdul Rahman | Hosted on GitHub Pages</p>
   </footer>
 </body>
 </html>
