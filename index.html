@@ -4,23 +4,108 @@
   <meta charset="UTF-8">
   <title>Practice Tasks Website</title>
   <style>
-    body { text-align: center; font-family: Arial, sans-serif; }
-    iframe { width: 80%; height: 600px; border: 2px solid #ccc; margin-top: 20px; }
+    body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+    section { display: none; max-width: 800px; margin: auto; text-align: left; }
+    section.active { display: block; }
     button { margin: 10px; padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    img { max-width: 300px; margin: 10px 0; }
+    table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+    table, th, td { border: 1px solid #333; padding: 8px; text-align: center; }
+    nav a { margin: 0 5px; }
+    footer { margin-top: 20px; font-size: 14px; color: #555; }
   </style>
 </head>
 <body>
   <h1>HTML Practice Tasks</h1>
-  <p>Switch between Day 1 and Day 2 outputs using the buttons below:</p>
+  <p>Click a button below to view the Day 1 or Day 2 output:</p>
 
-  <button onclick="loadPage('day1.html')">Show Day 1</button>
-  <button onclick="loadPage('day2.html')">Show Day 2</button>
+  <button onclick="showSection('day1')">Show Day 1</button>
+  <button onclick="showSection('day2')">Show Day 2</button>
 
-  <iframe id="viewer" src="day1.html"></iframe>
+  <!-- Day 1 Content -->
+  <section id="day1" class="active">
+    <h2>Day 1 - My First Website</h2>
+    <h1>Abdul Rahman</h1>
+    <p>Hello! I am learning web development. I enjoy coding and exploring new technologies.</p>
+
+    <h3>My Hobbies</h3>
+    <ul>
+      <li>Coding</li>
+      <li>Reading</li>
+      <li>Football</li>
+    </ul>
+
+    <h3>My Favorite Image</h3>
+    <img src="https://picsum.photos/300" alt="Hobby Image">
+
+    <h3>My Favorite Website</h3>
+    <a href="https://www.openai.com" target="_blank">Visit OpenAI</a>
+  </section>
+
+  <!-- Day 2 Content -->
+  <section id="day2">
+    <header>
+      <h2>Day 2 - Student Info Page</h2>
+      <nav>
+        <a href="#about">About</a> |
+        <a href="#marks">Marks</a> |
+        <a href="#feedback">Feedback</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h3>About Me</h3>
+        <p>Hello, I am <strong>Abdul Rahman</strong>. I love <i>web development</i> and enjoy building new projects.</p>
+      </section>
+
+      <section id="marks">
+        <h3>Subject Marks</h3>
+        <table>
+          <tr><th>Subject</th><th>Marks</th></tr>
+          <tr><td>Math</td><td>90</td></tr>
+          <tr><td>Science</td><td>85</td></tr>
+          <tr><td>English</td><td>88</td></tr>
+        </table>
+      </section>
+
+      <section id="feedback">
+        <h3>Feedback Form</h3>
+        <form>
+          Name: <input type="text" name="name"><br><br>
+          Email: <input type="email" name="email"><br><br>
+          Favorite Subject:
+          <select>
+            <option>Math</option>
+            <option>Science</option>
+            <option>English</option>
+          </select><br><br>
+          Message:<br>
+          <textarea rows="4" cols="30"></textarea><br><br>
+          <input type="submit" value="Submit">
+        </form>
+      </section>
+
+      <section>
+        <h3>Embedded Media</h3>
+        <iframe width="400" height="250" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video"></iframe>
+      </section>
+    </main>
+
+    <aside>
+      <h3>Related Content</h3>
+      <p>You can learn HTML basics at <a href="https://www.w3schools.com" target="_blank">W3Schools</a>.</p>
+    </aside>
+
+    <footer>
+      <p>&copy; 2025 Abdul Rahman | All Rights Reserved</p>
+    </footer>
+  </section>
 
   <script>
-    function loadPage(page) {
-      document.getElementById("viewer").src = page;
+    function showSection(sectionId) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(sectionId).classList.add("active");
     }
   </script>
 </body>
