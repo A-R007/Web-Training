@@ -3,89 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Info Page</title>
+  <title>Abdul Rahman | HTML Practice</title>
   <style>
-    body { font-family: "Poppins", sans-serif; background: #f5f0e6; color: #3e2c23; margin: 0; }
-    header, footer { background: #8b5e3c; color: #fff; text-align: center; padding: 15px 0; }
-    nav a { margin: 0 15px; color: #fff; text-decoration: none; }
-    nav a:hover { text-decoration: underline; }
-    main { padding: 40px; }
-    section { margin-bottom: 40px; }
-    h2 { color: #8b5e3c; }
-    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-    th, td { border: 1px solid #3e2c23; padding: 10px; text-align: center; }
-    th { background: #e6d9c5; }
-    form { display: grid; gap: 12px; max-width: 400px; }
-    input, textarea, select, button { padding: 10px; font-size: 14px; border: 1px solid #8b5e3c; border-radius: 6px; }
-    button { background: #8b5e3c; color: #fff; cursor: pointer; }
-    button:hover { background: #a06f4c; }
-    aside { background: #f0e4d3; padding: 15px; border-radius: 8px; margin-top: 20px; }
-    iframe { width: 100%; height: 300px; border: none; margin-top: 10px; }
+    body { font-family: "Poppins", sans-serif; background: #f5f0e6; color: #3e2c23; margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+    header, footer { background: #8b5e3c; color: #fff; text-align: center; padding: 20px 0; }
+    main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 50px 20px; }
+    h1 { margin-bottom: 10px; color: #fff; }
+    h2 { color: #8b5e3c; margin-bottom: 20px; }
+    .buttons { display: flex; gap: 20px; margin-top: 30px; }
+    a.button { padding: 12px 25px; background: #8b5e3c; color: #fff; text-decoration: none; font-weight: 500; border-radius: 8px; transition: 0.3s; }
+    a.button:hover { background: #a06f4c; }
+    footer p { margin: 0; font-size: 14px; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Student Info Page</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#marks">Marks</a>
-      <a href="#feedback">Feedback</a>
-      <a href="#media">Media</a>
-    </nav>
+    <h1>Abdul Rahman</h1>
+    <p>HTML Practice Tasks</p>
   </header>
 
   <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hello! I’m <strong>Abdul Rahman</strong>. This page is part of my practice tasks to explore <b>HTML5 elements</b>, 
-         formatting, and structure. I enjoy <i>building clean websites</i> and experimenting with new web technologies.</p>
-    </section>
-
-    <section id="marks">
-      <h2>My Marks</h2>
-      <table>
-        <tr>
-          <th>Subject</th>
-          <th>Marks</th>
-          <th>Grade</th>
-        </tr>
-        <tr><td>Mathematics</td><td>95</td><td>O</td></tr>
-        <tr><td>Science</td><td>89</td><td>A+</td></tr>
-        <tr><td>English</td><td>85</td><td>A</td></tr>
-        <tr><td>History</td><td>80</td><td>A-</td></tr>
-      </table>
-    </section>
-
-    <section id="feedback">
-      <h2>Feedback Form</h2>
-      <form>
-        <input type="text" placeholder="Enter your name" required>
-        <input type="email" placeholder="Enter your email" required>
-        <select>
-          <option value="">Select Subject</option>
-          <option>Mathematics</option>
-          <option>Science</option>
-          <option>English</option>
-        </select>
-        <textarea rows="4" placeholder="Your feedback"></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-
-    <section id="media">
-      <h2>Useful Resources</h2>
-      <p>Check out this amazing YouTube channel for coding:</p>
-      <iframe src="https://www.youtube.com/embed/qbLc5a9jdXo" allowfullscreen></iframe>
-
-      <aside>
-        <h3>Additional Resource</h3>
-        <p>Learn Python for free: <a href="https://www.python.org/" target="_blank">Python Official Site</a></p>
-      </aside>
-    </section>
+    <h2>Select a Practice Day</h2>
+    <div class="buttons">
+      <a href="day1/index.html" class="button">Day 1</a>
+      <a href="day2/index.html" class="button">Day 2</a>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Abdul Rahman | All rights reserved</p>
+    <p>&copy; 2025 Abdul Rahman | Hosted on GitHub Pages</p>
   </footer>
 </body>
 </html>
