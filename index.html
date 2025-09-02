@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abdul Rahman's Website</title>
   <style>
-    /* Reset */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: "Poppins", sans-serif; background: #f5f0e6; color: #3e2c23; }
 
-    /* Navigation Buttons */
     .toggle-btns {
       position: fixed;
       top: 20px;
@@ -30,7 +28,6 @@
     }
     .toggle-btns button:hover { background: #a47148; }
 
-    /* Sections */
     section {
       padding: 80px 10%;
       min-height: 100vh;
@@ -44,17 +41,12 @@
     }
     section.show { opacity: 1; transform: translateY(0); }
 
-    /* Headings */
     h1, h2 { color: #8b5e3c; margin-bottom: 20px; }
-
-    /* Paragraphs */
     p { font-size: 18px; line-height: 1.6; margin-bottom: 20px; }
 
-    /* List */
     ul { list-style: circle; margin: 20px auto; width: fit-content; text-align: left; }
     ul li { margin-bottom: 10px; }
 
-    /* Table */
     table {
       width: 80%;
       border-collapse: collapse;
@@ -69,7 +61,6 @@
     th { background: #8b5e3c; color: #fff; }
     tr:nth-child(even) { background: #e8dfd1; }
 
-    /* Form */
     form {
       width: 60%;
       margin: auto;
@@ -91,7 +82,6 @@
     }
     button:hover { background: #a47148; }
 
-    /* Iframe */
     iframe {
       margin-top: 20px;
       width: 80%;
@@ -100,7 +90,6 @@
       border: 2px solid #8b5e3c;
     }
 
-    /* Aside */
     aside {
       margin-top: 30px;
       padding: 15px;
@@ -112,7 +101,6 @@
       margin-right: auto;
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 20px;
@@ -123,33 +111,27 @@
   </style>
 </head>
 <body>
-
-<!-- Toggle Buttons -->
 <div class="toggle-btns">
   <button onclick="showSection('day1')">Day 1</button>
   <button onclick="showSection('day2')">Day 2</button>
 </div>
 
-<!-- DAY 1 -->
 <section id="day1">
   <h1>My First Website</h1>
   <h2>Abdul Rahman</h2>
   <p>Hello! I'm Abdul Rahman, passionate about technology, coding, and continuous learning.</p>
-
   <h3>My Hobbies</h3>
   <ul>
     <li>Reading Tech Blogs</li>
     <li>Building Projects</li>
     <li>Exploring AI/ML</li>
   </ul>
-
   <p>
     Visit my favorite site:
     <a href="https://takeuforward.org" target="_blank">Take U Forward</a>
   </p>
 </section>
 
-<!-- DAY 2 -->
 <section id="day2">
   <header>
     <h1>Abdul Rahman's Info Page</h1>
@@ -160,15 +142,11 @@
       <a href="#media">Media</a>
     </nav>
   </header>
-
   <main>
-    <!-- About -->
     <section id="about" class="subsec">
       <h2>About Me</h2>
       <p>Hi, I'm <b>Abdul Rahman</b>. I enjoy <i>coding</i>, <strong>designing</strong>, and working on projects that blend creativity with logic.</p>
     </section>
-
-    <!-- Marks -->
     <section id="marks" class="subsec">
       <h2>Marks & Grades</h2>
       <table>
@@ -180,8 +158,6 @@
         <tr><td>Computer Science</td><td>75</td><td>A-</td></tr>
       </table>
     </section>
-
-    <!-- Feedback -->
     <section id="feedback" class="subsec">
       <h2>Feedback Form</h2>
       <form>
@@ -196,13 +172,10 @@
         <button type="submit">Submit</button>
       </form>
     </section>
-
-    <!-- Media -->
     <section id="media" class="subsec">
       <h2>Media & Learning</h2>
       <p>One of my favorite YouTube playlists from Take U Forward:</p>
       <iframe src="https://www.youtube.com/embed/7tkeR4GqE2g" allowfullscreen></iframe>
-
       <aside>
         💡 Extra Resource:  
         <a href="https://www.geeksforgeeks.org/python-programming-language/" target="_blank">
@@ -211,14 +184,11 @@
       </aside>
     </section>
   </main>
-
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Abdul Rahman | Website</p>
+    <p>&copy; 2025 Abdul Rahman | Designed with ❤️</p>
   </footer>
 </section>
 
-<!-- JS -->
 <script>
   const sections = document.querySelectorAll("section");
   function showSection(id) {
